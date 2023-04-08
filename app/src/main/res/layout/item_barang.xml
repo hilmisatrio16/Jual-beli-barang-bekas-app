@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="produk"
+            type="com.example.jualbelibarangbekasapp.ListBarang" />
+    </data>
+        <androidx.cardview.widget.CardView
+            android:layout_margin="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgProduk"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    app:imageResource="@{produk.gambarProduk}"
+                    android:contentDescription="@string/image_produk"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/verified"
+                        android:textColor="#2FFF01"/>
+                    <TextView
+                        android:id="@+id/tvNamaProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="@{produk.namaProduk}"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/tvHargaProduk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{produk.hargaProduk}"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        />
+                    <TextView
+                        android:id="@+id/tvSeller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{produk.seller}"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+</layout>
